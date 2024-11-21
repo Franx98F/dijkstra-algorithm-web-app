@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo di Dijkstra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Algoritmo di Dijkstra</h1>
+
+        <div class="mt-4">
+            <h3>Aggiungi Nodo</h3>
+            <input type="text" id="nodeName" class="form-control" placeholder="Nome del Nodo">
+            <button id="addNodeBtn" class="btn btn-primary mt-2">Aggiungi Nodo</button>
+        </div>
+
+        <div class="mt-4">
+            <h3>Aggiungi Arco</h3>
+            <select id="fromNode" class="form-control mt-2">
+                <option value="">Da Nodo</option>
+            </select>
+            <select id="toNode" class="form-control mt-2">
+                <option value="">A Nodo</option>
+            </select>
+            <input type="number" id="weight" class="form-control mt-2" placeholder="Peso">
+            <button id="addEdgeBtn" class="btn btn-primary mt-2">Aggiungi Arco</button>
+        </div>
+
+        <div class="mt-4">
+            <h3>Calcola Percorso più Breve</h3>
+            <select id="startNode" class="form-control mt-2">
+                <option value="">Nodo Iniziale</option>
+            </select>
+            <select id="endNode" class="form-control mt-2">
+                <option value="">Nodo Finale</option>
+            </select>
+            <button id="calculateBtn" class="btn btn-success mt-2">Calcola</button>
+        </div>
+
+        <div class="mt-4">
+            <h3>Risultato</h3>
+            <pre id="result"></pre>
+        </div>
+
+        <!-- Div per la visualizzazione del grafo -->
+        <div id="graph" class="mt-4"></div>
+
+        <div class="mt-4">
+            <h3>Risultati Salvati</h3>
+            <table class="table table-bordered" id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Data e Ora</th>
+                        <th>Nodo Iniziale</th>
+                        <th>Nodo Finale</th>
+                        <th>Percorso</th>
+                        <th>Distanza Totale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- I risultati salvati vengono stampanti in questa tabella -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4">
+            <button id="deleteGraphBtn" class="btn btn-danger">Elimina Grafo</button>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
